@@ -1,5 +1,6 @@
 package service
 
+import model.Order
 import model.Product
 
 object OrderPrinterService {
