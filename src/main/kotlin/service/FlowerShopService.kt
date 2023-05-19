@@ -22,6 +22,8 @@ object FlowerShopService {
                         quantity = baseOrder.quantity + b.quantity,
                         bundles = baseOrder.bundles + b
                     )
+
+                    // N.B. multiple solutions might be possible. Taking the first one based on the bundles order
                     if (currOrder.quantity > maxOrder.quantity ||
                         (currOrder.quantity == maxOrder.quantity && currOrder.bundles.size < maxOrder.bundles.size)) {
                         maxOrder = currOrder
